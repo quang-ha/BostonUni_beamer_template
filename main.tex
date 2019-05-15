@@ -1,0 +1,172 @@
+\documentclass[10pt,xcolor=table]{beamer}
+
+% Use the preamble setting
+\input{preamble.tex}
+
+% Title and logo
+\title{A Fancy Title on Extremely Specialized Research Topic}
+\subtitle{Prospectus Defense}
+\date{\today}
+\author{John Smith}
+
+% Add bibliography file
+\bibliography{reference}
+
+\begin{document}
+% Make the title
+{
+% Uncomment the following to dismiss the transparent background crest
+\setbeamertemplate{background}{\tikz[remember picture,overlay]\node[opacity=0.04] at (current page.center) {\includegraphics[height=0.8\paperheight,keepaspectratio]{BostonUni_Crest.eps}};}
+\maketitle
+}
+
+% Setting all titles to be centered
+\setbeamertemplate{frametitle}[default][center]
+
+% Table of content
+\begin{frame}[plain]{Table of Contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+% Section 1
+\section{Introduction}
+\begin{frame}
+  \frametitle{A plain simple one}
+  \begin{itemize}
+  \item This is a simple frame.
+  \item It has nothing but just bullet points.
+  \end{itemize}
+  You can also have things without bullet points.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unusual layout frame}
+  \begin{columns}
+    \begin{column}{.44\textwidth}
+      \begin{figure}[t]
+        \includegraphics[width=0.8\textwidth]{cat}
+        \caption{A picture of a cat in a pot hole\footnotemark[1].}
+      \end{figure}
+    \end{column}
+    \begin{column}{.60\textwidth}
+      Observations:
+        \begin{itemize}
+        \item There is a cat.
+        \item It looks like it's stuck in a pot hole.
+        \end{itemize}
+    \end{column}
+  \end{columns}
+
+  You can also split things into two columns and arrange them as so.
+  
+  \vspace{0.8cm}
+  % Quick fix to citation for subfigures
+  \sbox1{\hbox{\footfullcite[1]{cat}}}
+\end{frame}
+
+% Section 2
+\section{Methodology}
+\begin{frame}
+  \frametitle{How to perform research}
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{hedgehog}
+    \caption{Hedgehog posing in a tiny kayak.}
+  \end{figure}
+  \vspace{-0.4cm}
+  \begin{itemize}
+  \item This is a picture of a happy hedgehog.
+  \item You can even cite where this hedgehog is from \footfullcite{hedgehog}.
+  \end{itemize}
+  \vspace{0.15cm}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Concurrent vs Information-passing}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.45\textwidth]{gecko}
+        \caption{Gecko strumming a leaf\footnotemark[2].}
+      \end{figure}
+      \begin{itemize}
+      \item He pulled out his guitar:
+      \item `Anyway, here's Wonderwall.'
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.45\textwidth]{eagle}
+        \caption{Bald eagle over ice\footnotemark[3].}
+      \end{figure}
+      \begin{itemize}
+      \item `\textit{When will my reflection shows...}'
+      \item `\textit{...who I am, inside}.'
+      \end{itemize}      
+    \end{column}    
+  \end{columns}
+  \vspace{0.25cm}
+  % Again, fix for the citation at the bottom
+  \sbox1{\hbox{\footfullcite[2]{gecko}}}
+  \sbox1{\hbox{\footfullcite[3]{eagle}}}
+\end{frame}
+
+
+% Results
+\section{Results}
+\begin{frame}
+  \frametitle{Computer models and calibration}
+  \begin{itemize}
+  \item Some results here...
+  \item Some results there...
+  \item And happy dancing mantis!
+  \end{itemize}  
+  \begin{figure}
+    \includegraphics[width=0.65\textwidth]{mantis}
+    \caption{Two mantis on a wig.}
+  \end{figure}
+\end{frame}
+
+% Conclusion and Further work
+\section{Conclusion and Further work}
+\begin{frame}
+  \frametitle{Remarks}
+  \begin{itemize}
+  \item The first goal is working hard.
+  \item The second goal is working a bit harder.
+  \item The most important goal is, however, having fun.
+  \item And you also get called a doctor by the end of it.
+  \end{itemize}
+\end{frame}
+
+% Typically asked - time line for the project
+\begin{frame}
+  \frametitle{Timeline for the project}
+\begin{table}[tp]
+  \caption{Timeline for the project.}
+  \label{table:timeline}
+  % If you need to adjust the table when it gets too large
+  \begin{adjustwidth}{-0.15in}{0.0in}
+    \centering
+    \footnotesize
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+      \hline
+      & \textbf{Q3-2019}                  & \textbf{Q4-2019}                 & \textbf{Q1-2020} & \textbf{Q2-2020} & \textbf{Q3-2020} & \textbf{Q4-2020}      & \textbf{Q1-2021}      & \textbf{Q2-2021}     \\ \hline
+      Wake up           & \multicolumn{2}{l|}{\cellcolor[HTML]{34FF34}{\color[HTML]{000000} }} &                  &                  &                  &                       &                       &                      \\ \hline
+      Get up           & \multicolumn{2}{l|}{\cellcolor[HTML]{38FFF8}{\color[HTML]{000000} }} &                  &                  &                  &                       &                       &                      \\ \hline
+      Dress up &                                   & \multicolumn{2}{l|}{\cellcolor[HTML]{3531FF}}       &                  &                  &                       &                       &                      \\ \hline
+      Breakfast and coffee          &                                   &                                  & \multicolumn{3}{l|}{\cellcolor[HTML]{6200C9}}          &                       &                       &                      \\ \hline
+      Work        &                                   &                                  & \multicolumn{3}{l|}{\cellcolor[HTML]{F8A102}}          &                       &                       &                      \\ \hline
+      Gym    &                                   &                                  &                  &                  & \multicolumn{3}{l|}{\cellcolor[HTML]{FD6864}}                    &                      \\ \hline
+      Home                  &                                   &                                  &                  &                  &                  & \multicolumn{3}{l|}{\cellcolor[HTML]{CB0000}{\color[HTML]{000000} }} \\ \hline
+    \end{tabular}    
+  \end{adjustwidth}
+\end{table}  
+\end{frame}
+
+% A thank you slide
+\begin{frame}{\Large Thank you for your attention!}
+  \centering \Large Any questions?
+\end{frame}
+
+\end{document}
